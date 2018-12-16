@@ -6,5 +6,12 @@ pipeline {
         echo 'Hello'
       }
     }
+    stage('ls') {
+      steps {
+        sh '''!#/bin/bash
+
+`ls`'''
+      }
+    }
   }
 }
