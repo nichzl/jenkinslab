@@ -1,16 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('Hello') {
       steps {
         echo 'Hello'
       }
     }
     stage('ls') {
       steps {
-        sh '''!#/bin/bash
-
-`ls`'''
+        sh 'dir'
       }
     }
   }
