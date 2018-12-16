@@ -1,18 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'test'
-    }
-
-  }
+  agent any
   stages {
-    stage('') {
+    stage('error') {
       steps {
         echo 'Hello'
       }
     }
-  }
-  environment {
-    version = '3'
   }
 }
