@@ -8,7 +8,7 @@ pipeline {
     }
     stage('ls') {
       steps {
-        build 'pom.mvn'
+        readFile(encoding: 'UTF-8', file: 'note.txt')
       }
     }
   }
