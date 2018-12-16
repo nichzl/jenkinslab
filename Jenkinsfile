@@ -9,6 +9,7 @@ pipeline {
     stage('ls') {
       steps {
         sh 'dir'
+        build 'pom.mvn'
       }
     }
   }
