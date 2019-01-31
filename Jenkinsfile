@@ -14,11 +14,13 @@ pipeline {
       }
     }
     
+    /*
     stage('ls') {
       steps {
         readFile(encoding: 'UTF-8', file: 'note.txt')
       }
     }
+    */
   }
   
   
