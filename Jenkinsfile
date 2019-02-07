@@ -7,6 +7,7 @@ pipeline {
   }
   */
   
+    
   stages {
     stage('Hello') {
       steps {
@@ -14,7 +15,17 @@ pipeline {
         //sh "mvn test"
       }
     }
+    stage('Compile HelloWorld.java') {
+      steps {
+        javac HelloWorld.java
+      }
+    }
     
+    stage('Run HelloWorld') {
+      steps {
+        java HelloWorld
+      }
+    }
     /*
     stage('ls') {
       steps {
