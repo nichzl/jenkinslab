@@ -17,13 +17,13 @@ pipeline {
     }
     stage('Compile HelloWorld.java') {
       steps {
-        javac HelloWorld.java
+        sh "javac HelloWorld.java"
       }
     }
     
     stage('Run HelloWorld') {
       steps {
-        java HelloWorld
+        sh "java HelloWorld"
       }
     }
     /*
