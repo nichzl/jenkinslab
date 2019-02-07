@@ -21,7 +21,7 @@ pipeline {
     stage('Remote execute') {
       steps {
         echo 'Hello'
-        sh "ssh nic@192.168.100.124 date"
+        sh "ssh 192.168.100.124 date"
       }
     }
     
