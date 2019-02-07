@@ -7,7 +7,9 @@ pipeline {
   }
   */
   
-    
+
+   
+  
   stages {
     stage('Hello') {
       steps {
@@ -15,6 +17,14 @@ pipeline {
         //sh "mvn test"
       }
     }
+    
+    stage('Remote execute') {
+      steps {
+        echo 'Hello'
+        sh "ssh nic@192.168.100.124 date"
+      }
+    }
+    
     stage('Compile HelloWorld.java') {
       steps {
         sh "javac HelloWorld.java"
